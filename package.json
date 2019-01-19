@@ -5,7 +5,7 @@
   "main": "src/main.ts",
   "scripts": {
     "serve:dev": "nodemon --watch 'src/*.ts' --exec 'ts-node' src/main.ts",
-    "serve:prd": "cd ./dist/src && pm2 start main.js --name System-Information",
+    "serve:prd": "cd dist/src && pm2 start main.js --name System-Information",
     "serve:prd-restart": "pm2 restart System-Information",
     "pull": "git fetch origin && git merge origin/master"
   },
