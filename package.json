@@ -1,0 +1,19 @@
+{
+  "name": "express-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "serve:dev": "nodemon --watch 'src/*.ts' --exec 'ts-node' src/main.ts",
+    "serve:prd": "cd ./dist/src && pm2 start main.js --name System-Information",
+    "serve:prd-restart": "pm2 restart System-Information",
+    "pull": "git fetch origin && git merge origin/master"
+  },
+  "author": "Billy Kirk",
+  "dependencies": {
+    "@types/express": "^4.16.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.9",
+    "systeminformation": "^3.54.0"
+  }
+}
